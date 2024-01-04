@@ -2,7 +2,7 @@
   <v-app>
       <v-card variant="flat" class="principalCard">
         <div class="principalDiv d-flex justify-center align-center h-100">
-          <div class="spacing"> <!-- div 1 -->
+          <div class="spacing"> 
             <p class="titlename"><v-icon>mdi-flash</v-icon>PLATAFORMA EXCLUSIVA</p>
             <h1 class="mt-4 mb-5">Conecte-se com outros servidores públicos e amplie seu conhecimento</h1>
             <p class="mr-3">
@@ -25,7 +25,7 @@
               </v-btn>
             </div>
           </div>
-          <div class="imagemPrincipal"> <!-- div 2 -->
+          <div class="imagemPrincipal"> 
             <v-card variant="flat" rounded="xl">
               <v-img
                 :width="504"
@@ -89,7 +89,7 @@
         <v-card class="blueCard">
           <div class="d-flex justify-center">
             <div class="spacingCol1">
-              <p class="sizeTitle1"><v-icon class="mr-2">mdi-cellphone-link</v-icon>DISPONÍVEL EM TODAS AS PLATAFORMAS</p>
+              <p class="fontSubtitle"><v-icon class="mr-2">mdi-cellphone-link</v-icon>DISPONÍVEL EM TODAS AS PLATAFORMAS</p>
               <h1>Junte-se à maior comunidade de servidores públicos do Brasil.</h1>
             </div>
             <div class="justify-center spacingCol2">
@@ -111,36 +111,37 @@
           </div>
         </v-card>
       </div>
-      <div class="principalDiv mt-10">
-        <v-col cols="5">
-          <h1>Comece sua jornada no Explica Aqui agora mesmo!</h1>
-        </v-col>
+      <div class="principalDiv2 mt-10 d-flex justify-center">
+        <div>
+          <v-col cols="5">
+            <h1>Comece sua jornada no Explica Aqui agora mesmo!</h1>
+          </v-col>
 
-        <v-col cols="4"></v-col>
-      
-        <div class="d-flex">
-            <div v-for="(itens, x) in itens2" :key="x">
-              <v-card class="spacingCardsIcons" variant="flat">
-                <v-card-item>
-                  <div>
-                    <v-sheet variant="tonal" :color="colors2[x]" :height="40" :width="40" rounded="lg">
-                      <v-icon 
-                        :color="colorIcon2[x]" 
-                        size="17" 
-                        class="colorIcon"
-                      >{{ itens.icon2 }}
-                      </v-icon>
-                    </v-sheet>
-                    <h6 class="classTitle">{{ itens.title2 }}</h6>
-                    <div>{{ itens.description }}</div>
-                    <div class="mt-4">{{ itens.description2 }}</div>
-                  </div>
-                </v-card-item>
-              </v-card>
-            </div>
+          <v-col cols="4"></v-col>
+        
+          <div class="d-flex">
+              <div v-for="(itens, x) in itens2" :key="x">
+                <v-card class="spacingCardsIcons" variant="flat">
+                  <v-card-item>
+                    <div>
+                      <v-sheet variant="tonal" :color="colors2[x]" :height="40" :width="40" rounded="lg">
+                        <v-icon 
+                          :color="colorIcon2[x]" 
+                          size="17" 
+                          class="colorIcon"
+                        >{{ itens.icon2 }}
+                        </v-icon>
+                      </v-sheet>
+                      <h6 class="classTitle">{{ itens.title2 }}</h6>
+                      <div>{{ itens.description }}</div>
+                      <div class="mt-4">{{ itens.description2 }}</div>
+                    </div>
+                  </v-card-item>
+                </v-card>
+              </div>
+          </div>
         </div>
       </div>
-
       <div class="d-flex justify-center">
         <v-card variant="flat" class="purpleCard justify-center text-center">
           <v-col cols="6" class="marginTitle">
@@ -216,6 +217,57 @@
           </div>
         </v-card>
       </div>
+
+      <div class="d-flex justify-center mt-12">
+        <div>
+          <p class="styleFaq"><v-icon class="pr-2">mdi-forum-plus</v-icon>FAQ</p>
+          <h1>Perguntas Frequentes</h1>
+        </div>
+        <div class="spacingCols">
+          <v-list v-model:opened="open">
+            <v-list-group v-for="(item, i) in items" :key="i" :value="item.title">
+              <template v-slot:activator="{ props }">
+                <v-list-item v-bind="props" class="bold-title">{{ item.title }}
+                </v-list-item>
+                <v-divider :thickness="2"></v-divider>
+              </template>
+              <v-list-item
+                v-for="title in item.expandedText.split('\n')"
+                :key="title"
+              >
+                {{ title }}
+              </v-list-item>
+            </v-list-group>
+          </v-list>
+        </div>
+      </div>
+
+      <div class="d-flex justify-center">
+        <v-card class="blueCard2">
+          <div class="d-flex justify-center">
+            <div class="spacingCol3">
+              <p class="fontSubtitle"><v-icon class="mr-2">mdi-wifi</v-icon>ACESSO ILIMITADO</p>
+              <h1>Dê o primeiro passo em direção ao seu desenvolvimento profissional.</h1>
+            </div>
+            <div class="justify-center spacingCol2">
+              <v-text-field
+                class="emailInput"
+                bg-color="#F6F5FF"
+                variant="flat"
+                density="compact"
+                rounded="xl"
+                placeholder="Digite seu e-mail"
+              >
+              </v-text-field>
+              <v-btn 
+                rounded="xl" 
+                class="btnRegister"
+              >CADASTRE-SE AGORA
+              </v-btn>
+            </div>
+          </div>
+        </v-card>
+      </div>
   </v-app>
 </template>
 
@@ -250,9 +302,19 @@ export default {
         { icon: 'mdi-check-decagram', text: 'Todos os benefícios do plano gratuito' },
         { icon: 'mdi-check-decagram', text: 'Sem limite de perguntas ou respostas' },
         { icon: 'mdi-check-decagram', text: 'Respostas verificadas por especialistas' },
-      ]
+      ],
+      items: [
+        { title: 'O que é o Explica Aqui?', expandedText: 'Conteúdo do Item 1' },
+        { title: 'Quais são os benefícios do Explica Aqui?', expandedText: 'Conteúdo do Item 2' },
+        { title: 'Como posso me cadastrar no Explica Aqui?', expandedText: 'Conteúdo do Item 2' },        
+        { title: 'Quais são os planos disponíveis no Explica Aqui?', expandedText: 'Conteúdo do Item 3' },
+        { title: 'Qual a diferença entre respostas verificadas e não verificadas?', expandedText: 'Conteúdo do Item 4' },
+        { title: 'Posso trocar do Plano Gratuito para o Premium a qualquer momento?', expandedText: 'Conteúdo do Item 5' },
+      ],
+      open: [],
     };
-  }
+    
+  },
 };
 
 </script>
@@ -360,12 +422,17 @@ font-family: 'Sora', sans-serif;
 }
 
 .spacingCol1 {
-  margin-top: 70px;
+  margin-top: 60px;
   margin-left: 60px;
   margin-right: 80px;
   color: #FFFFFF;
 }
 
+.fontSubtitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
 
 .spacingCol2 {
   margin-top: 87px;
@@ -382,6 +449,11 @@ font-family: 'Sora', sans-serif;
   background-color: #4E42FF;
   color: #FFFFFF;
   font-weight: 600;
+}
+
+.principalDiv2 {
+  margin-left: 90px;
+  margin-bottom: 70px;
 }
 
 .spacingCardsIcons {
@@ -448,5 +520,36 @@ v-card-title {
   margin-top: 20px;
 }
 
+.styleFaq {
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 7px;
+  margin-bottom: 10px;
+}
+.spacingCols {
+  margin-left: 90px;
+}
+
+.bold-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+} 
+
+.blueCard2 {
+  background-color: #161B33;
+  width: 1128px;
+  height: 262px;
+  border-radius: 30px;
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+.spacingCol3 {
+  margin-top: 65px;
+  margin-left: 60px;
+  margin-right: 30px;
+  color: #FFFFFF;
+}
 
 </style>
