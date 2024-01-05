@@ -3,13 +3,12 @@
     <div class="divPrincipal d-flex">
       <div class="me-auto">
         <v-img 
-          class="spacingImg"
           :width="200"
           :height="38"
           src="/src/assets/Logo-padrão.png"
         ></v-img>
       </div>
-      <div>
+      <div class="spacingText">
         <v-btn variant="text">BENEFÍCIOS</v-btn>
         <v-btn variant="text">COMO FUNCIONA</v-btn>
         <v-btn variant="text">PLANOS</v-btn>
@@ -24,7 +23,10 @@
 export default {
   data() {
     return {
-
+      itemsDownload: [
+        { iconSrc: "/src/assets/icons8-mac-os-60.png", description1: "Grátis na", description2: "App store" },
+        { iconSrc: "/src/assets/icons8-google-play-60.png", description1: "Grátis na", description2: "Play store" },
+      ]
     }
   }
 }
@@ -33,13 +35,17 @@ export default {
 <style>
 
 .divPrincipal {
+  margin-top: 2%;
   margin-left: 15%;
   margin-right: 15%;
 }
 
+.spacingText {
+  margin-right: -30%;
+}
+
 .spacingImg {
   margin-right: 400px;
-
 }
 
 </style>
