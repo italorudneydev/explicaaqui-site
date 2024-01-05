@@ -234,7 +234,8 @@
               <v-list-item
                 v-for="title in item.expandedText.split('\n')"
                 :key="title"
-              >
+                class="ml-n4"
+                >
                 {{ title }}
               </v-list-item>
             </v-list-group>
@@ -267,7 +268,7 @@
             </div>
           </div>
         </v-card>
-      </div>
+      </div>      
   </v-app>
 </template>
 
@@ -304,16 +305,15 @@ export default {
         { icon: 'mdi-check-decagram', text: 'Respostas verificadas por especialistas' },
       ],
       items: [
-        { title: 'O que é o Explica Aqui?', expandedText: 'Conteúdo do Item 1' },
-        { title: 'Quais são os benefícios do Explica Aqui?', expandedText: 'Conteúdo do Item 2' },
-        { title: 'Como posso me cadastrar no Explica Aqui?', expandedText: 'Conteúdo do Item 2' },        
-        { title: 'Quais são os planos disponíveis no Explica Aqui?', expandedText: 'Conteúdo do Item 3' },
-        { title: 'Qual a diferença entre respostas verificadas e não verificadas?', expandedText: 'Conteúdo do Item 4' },
-        { title: 'Posso trocar do Plano Gratuito para o Premium a qualquer momento?', expandedText: 'Conteúdo do Item 5' },
+      { title: 'O que é o Explica Aqui?', expandedText: 'A comunidade ExplicaAqui é formada por servidores públicos que compartilham o interesse comum em fomentar o conhecimento técnico, promover o aprendizado e facilitar a troca de informações em diversas especializações. Pode-se ainda dizer que o ExplicaAQui é uma comunidade engajada na promoção de um ambiente colaborativo entre servidores públicos, com a missão final de contribuir para a prestação de serviços públicos de alto padrão à sociedade.' },
+        { title: 'Quais são os benefícios do Explica Aqui?', expandedText: 'Acesso a diversidade de experiências, aprendizado Contínuo, resolução de Problemas, feedback construtivo, mentoria Informal, atualização de tendências, acesso a recursos exclusivos, colaboração e projetos conjuntos' },
+        { title: 'Como posso me cadastrar no Explica Aqui?', expandedText: 'Acesse a página inicial do ExplicaAqui e escolha “cadastrar”, preencha seus dados corretamente e comece a participar da maior comunidade de servidores públicos do Brasil.' },        
+        { title: 'Quais são os planos disponíveis no Explica Aqui?', expandedText: 'São dois os planos disponíveis: Gratuíto e Premium. A diferença entre eles é que no plano Premium o membro tem acesso a recursos exclusivos, tais como: respostas verificadas, webinars, cursos, e-books e ferramentas especiais.' },
+        { title: 'Qual a diferença entre respostas verificadas e não verificadas?', expandedText: 'As respostas não verificadas são fornecidas por membros que informaram livremente conhecimento específico para a área em questão. Já as respostas verificadas são fornecidas por especialistas e ferramentas identificados e verificados pela equipe do ExplicaAqui.' },
+        { title: 'Posso trocar do Plano Gratuito para o Premium a qualquer momento?', expandedText: 'Sim, é possivel a qualquer momento efetuar a toca de plano.' },
       ],
       open: [],
     };
-    
   },
 };
 
@@ -528,6 +528,7 @@ v-card-title {
 }
 .spacingCols {
   margin-left: 90px;
+  width: 644px;
 }
 
 .bold-title {
