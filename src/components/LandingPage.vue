@@ -1,90 +1,98 @@
 <template>
   <v-app>
       <v-card variant="flat" class="principalCard">
-        <div class="principalDiv d-flex justify-center align-center h-100">
-          <div class="spacing"> 
-            <p class="titlename"><v-icon>mdi-flash</v-icon>PLATAFORMA EXCLUSIVA</p>
-            <h1 class="mt-4 mb-5">Conecte-se com outros servidores públicos e amplie seu conhecimento</h1>
-            <p class="mr-3">
-              Com o Explica Aqui, você tira suas dúvidas, aprende com os melhores especialistas e constrói uma rede de contatos para se manter atualizado e avançar na carreira.
-            </p>
-            <div class="d-flex mt-4 justify-center">
-              <v-text-field
-                class="insertButton"
-                bg-color="#FFFFFF"
-                variant="flat"
-                density="compact"
-                rounded="xl"
-                placeholder="Insira seu e-mail"
-              >
-              </v-text-field> 
-              <v-btn 
-                rounded="xl" 
-                class="registerButton"
-              >CADASTRE-SE AGORA
-              </v-btn>
-            </div>
-          </div>
-          <div class="imagemPrincipal"> 
-            <v-card variant="flat" rounded="xl">
-              <v-img
-                :width="504"
-                :height="381"
-                aspect-ratio="16/9"
-                cover
-                src="/src/assets/tablet-digital-pode-resolver-o-problema 1.png"
-              ></v-img>
-            </v-card>
-            <v-img
-              class="spacingImage1"
-              src="/src/assets/image-PhotoRoom.png-PhotoRoom.png"
-            >
-            </v-img>
-            <v-img
-              src="/src/assets/tiresuaduvida.png"
-              class="spacingImage2"
-            >
-            </v-img>
-          </div>
+        <div class="principalDivFirst">
+          <v-row justify="center">
+            <v-col class="mr-9">
+              <div> 
+                <p class="titlename"><v-icon>mdi-flash</v-icon>PLATAFORMA EXCLUSIVA</p>
+                <h1 class="mt-4 mb-5">Conecte-se com outros servidores públicos e amplie seu conhecimento</h1>
+                <p class="mr-3">
+                  Com o Explica Aqui, você tira suas dúvidas, aprende com os melhores especialistas e constrói uma rede de contatos para se manter atualizado e avançar na carreira.
+                </p>
+                <div class="d-flex mt-4 justify-center">
+                  <v-text-field
+                    class="insertButton"
+                    bg-color="#FFFFFF"
+                    variant="flat"
+                    density="compact"
+                    rounded="xl"
+                    placeholder="Insira seu e-mail"
+                  >
+                  </v-text-field> 
+                  <v-btn 
+                    rounded="xl" 
+                    class="registerButton"
+                  >CADASTRE-SE AGORA
+                  </v-btn>
+                </div>
+              </div>
+            </v-col>
+            <v-col>
+              <div class="imagemPrincipal"> 
+                  <v-img
+                    :width="504"
+                    :height="381"
+                    aspect-ratio="16/9"
+                    cover
+                    src="/src/assets/tablet-digital-pode-resolver-o-problema 1.png"
+                  ></v-img>
+                <v-img
+                  class="spacingImage1"
+                  src="/src/assets/image-PhotoRoom.png-PhotoRoom.png"
+                >
+                </v-img>
+                <v-img
+                  src="/src/assets/tiresuaduvida.png"
+                  class="spacingImage2"
+                >
+                </v-img>
+              </div>
+            </v-col>
+          </v-row>
         </div>
       </v-card>
+      <div class="principalDiv d-flex">
+        <v-row justify="center">
+          <v-col>
+            <img 
+              src="/src/assets/image-removebg.png"
+              :width="472"
+              :height="600"
+            >
+          </v-col>
+          <v-col>
+            <div class="mt-15">
+              <h1 class="ml-14">Aprenda, colabore com colegas e se desenvolva profissionalmente</h1>
+                <v-row align="center" justify="center">
+                  <v-col v-for="(variant, i) in variants" :key="i" cols="auto">
+                    <v-card class="secondCard" variant="flat">
+                      <v-card-item>
+                        <div>
+                          <v-sheet
+                            class="cardIcons"
+                            variant="tonal"
+                            :color="colors[i]" 
+                          >
+                            <v-icon 
+                              :color="colorIcon[i]" 
+                              size="17" 
+                              class="colorIcon" 
+                            > {{ variant.icon }}
+                            </v-icon>
+                          </v-sheet>
+                          <h6 class="classTitle">{{ variant.title }}</h6>
+                          <div>{{ variant.description }}</div>
+                        </div>
+                      </v-card-item>
+                    </v-card>
+                  </v-col>
+                </v-row>
+            </div>
+          </v-col>
+        </v-row>
+    </div>
 
-      <div class="principalDiv d-flex justify-center align-center">
-        <div>
-          <img 
-            src="/src/assets/image-removebg.png"
-            :width="472"
-            :height="600"
-          >
-        </div>
-        <div class="mt-15">
-          <h1 class="ml-14">Aprenda, colabore com colegas e se desenvolva profissionalmente</h1>
-            <v-row align="center" justify="center">
-              <v-col v-for="(variant, i) in variants" :key="i" cols="auto">
-                <v-card class="secondCard" variant="flat">
-                  <v-card-item>
-                    <div>
-                      <v-sheet
-                        class="cardIcons"
-                        variant="tonal"
-                        :color="colors[i]" 
-                      >
-                        <v-icon 
-                          :color="colorIcon[i]" 
-                          size="17" 
-                          class="colorIcon" 
-                        > {{ variant.icon }}
-                        </v-icon>
-                      </v-sheet>
-                      <h6 class="classTitle">{{ variant.title }}</h6>
-                      <div>{{ variant.description }}</div>
-                    </div>
-                  </v-card-item>
-                </v-card>
-              </v-col>
-            </v-row>
-        </div>
-      </div>
       <div class="d-flex justify-center">
         <v-card class="blueCard">
           <div class="d-flex justify-center">
@@ -330,17 +338,53 @@ font-family: 'Sora', sans-serif;
 .principalCard {
   background-color: #edecff;
   height: 552px;
+  max-width: 100%;
 }
 
-.principalDiv {
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+  .principalCard {
+    max-width: 150%;
+    max-width: 150%;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1720px) {
+  .principalCard {
+    max-width: 150%;
+    max-width: 150%;
+    height: 1000px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .principalCard {
+    max-width: 150%;
+    max-width: 150%;
+    height: 1050px;
+  }
+}
+
+
+.principalDivFirst {
   margin-left: 20%;
   margin-right: 20%;
   margin-bottom: 10%;
+  margin-top: 4%;
+
 }
 
-.spacing {
-  margin-right: 15%;
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+  .principalDivFirst {
+
+  }
 }
+
+.principalDiv {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 10%;
+}
+
 
 .titlename {
   font-weight: 600;
@@ -417,8 +461,14 @@ font-family: 'Sora', sans-serif;
   width: 1128px;
   height: 262px;
   border-radius: 30px;
-  margin-top: -130px;
   margin-bottom: 15px;
+}
+
+
+@media screen and (max-width: 960px) {
+  .blueCard {
+    max-width: 150%;
+  }
 }
 
 .spacingCol1 {
