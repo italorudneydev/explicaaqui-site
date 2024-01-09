@@ -1,97 +1,88 @@
 <template>
   <v-app>
       <v-card variant="flat" class="principalCard">
-        <div class="principalDivFirst">
-          <v-row justify="center">
-            <v-col class="mr-9">
-              <div> 
-                <p class="titlename"><v-icon>mdi-flash</v-icon>PLATAFORMA EXCLUSIVA</p>
-                <h1 class="mt-4 mb-5">Conecte-se com outros servidores públicos e amplie seu conhecimento</h1>
-                <p class="mr-3">
-                  Com o Explica Aqui, você tira suas dúvidas, aprende com os melhores especialistas e constrói uma rede de contatos para se manter atualizado e avançar na carreira.
-                </p>
-                <div class="d-flex mt-4 justify-center">
-                  <v-text-field
-                    class="insertButton"
-                    bg-color="#FFFFFF"
-                    variant="flat"
-                    density="compact"
-                    rounded="xl"
-                    placeholder="Insira seu e-mail"
-                  >
-                  </v-text-field> 
-                  <v-btn 
-                    rounded="xl" 
-                    class="registerButton"
-                  >CADASTRE-SE AGORA
-                  </v-btn>
-                </div>
-              </div>
-            </v-col>
-            <v-col>
-              <div class="imagemPrincipal"> 
-                  <v-img
-                    :width="504"
-                    :height="381"
-                    aspect-ratio="16/9"
-                    cover
-                    src="/src/assets/tablet-digital-pode-resolver-o-problema 1.png"
-                  ></v-img>
-                <v-img
-                  class="spacingImage1"
-                  src="/src/assets/image-PhotoRoom.png-PhotoRoom.png"
-                >
-                </v-img>
-                <v-img
-                  src="/src/assets/tiresuaduvida.png"
-                  class="spacingImage2"
-                >
-                </v-img>
-              </div>
+        <div class="spacingCol d-flex flex-column flex-md-row flex-lg-row justify-space-between">
+          <div class="divText pa-5 mt-12"> 
+            <p class="titlename"><v-icon>mdi-flash</v-icon>PLATAFORMA EXCLUSIVA</p>
+            <h1 class="mt-4 mb-5">Conecte-se com outros servidores públicos e amplie seu conhecimento</h1>
+            <p class="mr-3">
+              Com o Explica Aqui, você tira suas dúvidas, aprende com os melhores especialistas e constrói uma rede de contatos para se manter atualizado e avançar na carreira.
+            </p>
+            <div class="d-flex flex-column flex-md-row justify-space-between">
+              <v-text-field
+                class="insertButton"
+                bg-color="#FFFFFF"
+                variant="flat"
+                density="compact"
+                rounded="xl"
+                placeholder="Insira seu e-mail"
+              >
+              </v-text-field> 
+              <v-btn 
+                rounded="xl" 
+                class="registerButton"
+              >CADASTRE-SE AGORA
+              </v-btn>
+            </div>
+          </div>
+          <div class="pa-5"> 
+            <div class="imagemPrincipal mx-auto"> 
+              <v-img
+                aspect-ratio="16/9"
+                cover
+                src="/src/assets/tablet-digital-pode-resolver-o-problema 1.png"
+              ></v-img>
+              <v-img
+                class="spacingImage1"
+                src="/src/assets/image-PhotoRoom.png-PhotoRoom.png"
+              >
+              </v-img>
+              <v-img
+                src="/src/assets/tiresuaduvida.png"
+                class="spacingImage2"
+              >
+              </v-img>
+            </div>
+          </div>
+        </div>
+      </v-card>
+
+      <div class="principalDiv d-flex flex-column flex-md-row flex-lg-row ">
+        <div>
+          <img 
+            src="/src/assets/image-removebg.png"
+            class="dimensionImg"
+          >
+        </div>
+        <div class="mx-auto colCards">
+          <v-row>
+            <h1 class="titleDiv2">Aprenda, colabore com colegas e se desenvolva profissionalmente</h1>
+            <v-col v-for="(variant, i) in variants" :key="i" cols="12" md="12" lg="6" xl="5">
+              <v-card class="secondCard" variant="flat">
+                <v-card-item>
+                  <div class="spacingContent">
+                    <v-sheet
+                      class="cardIcons"
+                      variant="tonal"
+                      :color="colors[i]" 
+                    >
+                      <v-icon 
+                        :color="colorIcon[i]" 
+                        size="17" 
+                        class="colorIcon" 
+                      > {{ variant.icon }}
+                      </v-icon>
+                    </v-sheet>
+                    <h6 class="classTitle">{{ variant.title }}</h6>
+                    <div>{{ variant.description }}</div>
+                    <v-divider class="mt-7 d-md-none d-xl-none d-lg-none" :thickness="2"></v-divider>
+                  </div>
+                </v-card-item>
+              </v-card>
             </v-col>
           </v-row>
         </div>
-      </v-card>
-      <div class="principalDiv d-flex">
-        <v-row justify="center">
-          <v-col>
-            <img 
-              src="/src/assets/image-removebg.png"
-              :width="472"
-              :height="600"
-            >
-          </v-col>
-          <v-col>
-            <div class="mt-15">
-              <h1 class="ml-14">Aprenda, colabore com colegas e se desenvolva profissionalmente</h1>
-                <v-row align="center" justify="center">
-                  <v-col v-for="(variant, i) in variants" :key="i" cols="auto">
-                    <v-card class="secondCard" variant="flat">
-                      <v-card-item>
-                        <div>
-                          <v-sheet
-                            class="cardIcons"
-                            variant="tonal"
-                            :color="colors[i]" 
-                          >
-                            <v-icon 
-                              :color="colorIcon[i]" 
-                              size="17" 
-                              class="colorIcon" 
-                            > {{ variant.icon }}
-                            </v-icon>
-                          </v-sheet>
-                          <h6 class="classTitle">{{ variant.title }}</h6>
-                          <div>{{ variant.description }}</div>
-                        </div>
-                      </v-card-item>
-                    </v-card>
-                  </v-col>
-                </v-row>
-            </div>
-          </v-col>
-        </v-row>
-    </div>
+      </div>
 
       <div class="d-flex justify-center">
         <v-card class="blueCard">
@@ -191,8 +182,6 @@
                 variant="outlined"
               >CADASTRE-SE AGORA</v-btn>
             </v-card>
-
-
             <v-card align="start" variant="flat" class="subCard2">
               <h1 class="mt-8 mb-4">
                 <v-icon>mdi-asterisk</v-icon>
@@ -225,7 +214,6 @@
           </div>
         </v-card>
       </div>
-
       <div class="d-flex justify-center mt-12">
         <div>
           <p class="styleFaq"><v-icon class="pr-2">mdi-forum-plus</v-icon>FAQ</p>
@@ -250,7 +238,6 @@
           </v-list>
         </div>
       </div>
-
       <div class="d-flex justify-center">
         <v-card class="blueCard2">
           <div class="d-flex justify-center">
@@ -324,7 +311,6 @@ export default {
     };
   },
 };
-
 </script>
 
 <style>
@@ -341,17 +327,8 @@ font-family: 'Sora', sans-serif;
   max-width: 100%;
 }
 
-@media screen and (min-width: 960px) and (max-width: 1279px) {
+@media screen and (max-width: 600px) {
   .principalCard {
-    max-width: 150%;
-    max-width: 150%;
-  }
-}
-
-@media screen and (min-width: 960px) and (max-width: 1720px) {
-  .principalCard {
-    max-width: 150%;
-    max-width: 150%;
     height: 1000px;
   }
 }
@@ -360,31 +337,41 @@ font-family: 'Sora', sans-serif;
   .principalCard {
     max-width: 150%;
     max-width: 150%;
-    height: 1050px;
+    height: 1000px;
   }
 }
 
-
-.principalDivFirst {
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-bottom: 10%;
-  margin-top: 4%;
-
-}
-
-@media screen and (min-width: 960px) and (max-width: 1279px) {
-  .principalDivFirst {
-
+@media screen and (min-width: 959px) and (max-width: 1720px) {
+  .principalCard {
+    max-width: 150%;
+    max-width: 150%;
+    height: 500px;
   }
 }
 
-.principalDiv {
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-bottom: 10%;
+@media screen and (max-width: 960px) {
+  .spacingCol {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1280px) {
+  .spacingCol {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
 }
 
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+  .spacingCol {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .spacingContent {
+    width: 260px;
+    height: 208px;
+  }
+} 
 
 .titlename {
   font-weight: 600;
@@ -392,29 +379,122 @@ font-family: 'Sora', sans-serif;
 }
 
 .insertButton {
-  width: 219px !important;
   height: 40px;
-  margin-right: 12px;
   margin-top: 15px;
-  margin-bottom: 40px;
   font-weight: 600 !important;
+  margin-right: 7px;
 }
 
 .registerButton {
   background-color: #161B33 !important;
   color: white !important;
-  width: 199px;
   height: 40px;
   margin-top: 15px;
-  margin-bottom: 40px;
+  margin-right: 7px;
   font-weight: 600 !important;
   font-size: 13px;
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
+  .divText {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+}
+
+.principalDiv {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+@media screen and (max-width: 600px) {
+  .principalDiv {
+    margin-left: 10px ;
+    margin-right: 10px;
+  }
+}
+
+.dimensionImg {
+  width: 470px;
+  height: 600px;
+  margin-right: 50px;
+}
+
+.titleDiv2 {
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .colCards {
+    margin-left: 0px ;
+    margin-right: 0px;
+  }
+  .titleDiv2 {
+    margin-left: 30px ;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+  .colCards {
+    margin-top: 50px ;
+  }
+}
+/* específico ^^^ */
+
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+  .imagemPrincipal {
+    width: 320px !important;
+    height: 230px !important;
+    margin-top: 90px !important;
+    justify-content: center;
+    margin-left: 80px !important;
+    margin-right: -50px !important;
+    align-items: center;
+  }
 }
 
 .imagemPrincipal {
   margin-top: 35px;
   margin-left: 20px;
   margin-right: 20px;
+  width: 504px;
+  height: 381px;
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+  .imagemPrincipal {
+    margin-left: 60px !important;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .imagemPrincipal {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .imagemPrincipal {
+    width: 320px !important;
+    height: 230px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .spacingImage1 {
+    margin-top: -200px !important;
+    margin-left: -40px !important;
+    width:120px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .spacingImage2 {
+    margin-top: 110px !important;
+    margin-left: 130px !important;
+    width: 170px !important;
+  }
 }
 
 .spacingImage1 {
@@ -423,16 +503,35 @@ font-family: 'Sora', sans-serif;
   width: 183px;
 }
 
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+  .spacingImage1 {
+    margin-top: -200px;
+    margin-left: -50px;
+    width:120px;
+  }
+}
+
 .spacingImage2 {
   margin-top: 205px;
   margin-left: 240px;
   width: 253px;
 }
 
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+  .spacingImage2 {
+    margin-top: 110px;
+    margin-left: 140px;
+    width: 170px;
+  }
+}
+
 .secondCard {
-  margin-left: 5px;
-  max-width: 280px;
-  margin: auto;
+  width: 500px;
+}
+
+.spacingContent {
+  margin-top: -3px;
+  
 }
 
 .cardIcons {
@@ -450,11 +549,10 @@ font-family: 'Sora', sans-serif;
 
 .classTitle {
   margin-top: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
   font-size: 24px;
   font-weight: 600;
 }
-
 
 .blueCard {
   background-color: #161B33;
@@ -463,7 +561,6 @@ font-family: 'Sora', sans-serif;
   border-radius: 30px;
   margin-bottom: 15px;
 }
-
 
 @media screen and (max-width: 960px) {
   .blueCard {
@@ -596,6 +693,7 @@ v-card-title {
   margin-top: 70px;
   margin-bottom: 15px;
 }
+
 .spacingCol3 {
   margin-top: 65px;
   margin-left: 60px;
