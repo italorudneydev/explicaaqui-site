@@ -47,84 +47,82 @@
           </div>
         </div>
       </v-card>
-      <div class="principalDiv d-flex flex-column flex-md-row flex-lg-row">
+      <div class="principalDiv d-flex mx-auto flex-column flex-md-row flex-lg-row">
         <div>
           <img src="/src/assets/image-removebg.png" class="dimensionImg" />
         </div>
         <div class="mx-auto justify-center colCards">
-          <v-row>
-            <h1 class="titleDiv2">
+            <h1 class="spacingTitle justify-center">
               Aprenda, colabore com colegas e se desenvolva profissionalmente
             </h1>
-            <v-col
-              v-for="(variant, i) in variants"
-              :key="i"
-              cols="12"
-              md="12"
-              lg="6"
-              xl="5"
-            >
-              <v-card class="secondCard" variant="flat">
-                <v-card-item>
-                  <div class="spacingContent">
-                    <v-sheet class="cardIcons" variant="tonal" :color="colors[i]">
-                      <v-icon :color="colorIcon[i]" size="17" class="colorIcon">
-                        {{ variant.icon }}
-                      </v-icon>
-                    </v-sheet>
-                    <h6 class="classTitle">{{ variant.title }}</h6>
-                    <div>{{ variant.description }}</div>
-                    <v-divider
-                      class="mt-7 d-md-none d-xl-none d-lg-none"
-                      :thickness="2"
-                    ></v-divider>
-                  </div>
-                </v-card-item>
-              </v-card>
-            </v-col>
-          </v-row>
+            <v-row>
+              <v-col
+                v-for="(variant, i) in variants"
+                :key="i"
+                cols="12"
+                md="12"
+                lg="6"
+                xl="5"
+              >
+                <v-card class="mx-auto secondCard" variant="flat">
+                  <v-card-item>
+                    <div class="spacingContent">
+                      <v-sheet class="cardIcons" variant="tonal" :color="colors[i]">
+                        <v-icon :color="colorIcon[i]" size="17" class="colorIcon">
+                          {{ variant.icon }}
+                        </v-icon>
+                      </v-sheet>
+                      <h6 class="classTitle">{{ variant.title }}</h6>
+                      <div>{{ variant.description }}</div>
+                      <v-divider
+                        class="mt-7 d-md-none d-xl-none d-lg-none"
+                        :thickness="2"
+                      ></v-divider>
+                    </div>
+                  </v-card-item>
+                </v-card>
+              </v-col>
+            </v-row>
         </div>
       </div>
-      <div class="d-flex justify-center">
-      <v-card class="blueCard">
-        <div class="d-flex justify-center flex-column flex-md-row">
-          <div class="spacingCol1">
-            <p class="fontSubtitle">
-              <v-icon class="mr-2">mdi-cellphone-link</v-icon>DISPONÍVEL EM
-              TODAS AS PLATAFORMAS
-            </p>
-            <h1>
-              Junte-se à maior comunidade de servidores públicos do Brasil.
-            </h1>
+      <div class="d-flex justify-center mt-12">
+        <v-card class="blueCard">
+          <div class="d-flex justify-center flex-column flex-md-row">
+            <div class="spacingCol1">
+              <p class="fontSubtitle">
+                <v-icon class="mr-2">mdi-cellphone-link</v-icon>DISPONÍVEL EM
+                TODAS AS PLATAFORMAS
+              </p>
+              <h1>
+                Junte-se à maior comunidade de servidores públicos do Brasil.
+              </h1>
+            </div>
+            <div class="justify-center mx-auto spacingCol2">
+              <v-text-field
+                class="emailInput"
+                bg-color="#F6F5FF"
+                variant="flat"
+                density="compact"
+                rounded="xl"
+                placeholder="Digite seu e-mail"
+              >
+              </v-text-field>
+              <v-btn rounded="xl" class="btnRegister">CADASTRE-SE AGORA </v-btn>
+            </div>
           </div>
-          <div class="justify-center mx-auto spacingCol2">
-            <v-text-field
-              class="emailInput"
-              bg-color="#F6F5FF"
-              variant="flat"
-              density="compact"
-              rounded="xl"
-              placeholder="Digite seu e-mail"
-            >
-            </v-text-field>
-            <v-btn rounded="xl" class="btnRegister">CADASTRE-SE AGORA </v-btn>
-          </div>
-        </div>
-      </v-card>
-    </div>
+        </v-card>
+      </div>
 
     <div class="mt-10">
       <div>
-        <v-col cols="12">
-          <h1 class="marginTitle1">
-            Comece sua jornada no Explica Aqui agora mesmo!
-          </h1>
-        </v-col>
-        <div class="flex-column flex-md-row">
+        <h1 class="marginTitle1 d-flex justify-center mb-12">
+          Comece sua jornada no Explica Aqui agora mesmo!
+        </h1>
+        <div class=" flex-column d-flex justify-center mx-auto flex-md-row">
           <div
             v-for="(itens, x) in itens2"
             :key="x"
-            class="d-flex justify-center mx-auto"
+            class="spacingPrincipalCards d-flex justify-center"
           >
             <v-card class="spacingCardsIcons" variant="flat">
               <v-card-item>
@@ -155,7 +153,7 @@
       </div>
     </div>
 
-    <div class="d-flex justify-center">
+    <div class="d-flex justify-center mt-12">
       <v-card variant="flat" class="purpleCard justify-center text-center">
         <v-col class="marginTitle">
           <h1>
@@ -254,14 +252,14 @@
       </div>
     </div>
 
-    <div class="d-flex justify-center">
+    <div class="d-flex justify-center mt-12">
       <v-card class="blueCard2">
-        <div class="d-flex justify-center">
+        <div class="d-flex justify-center flex-column flex-md-row">
           <div class="spacingCol3">
             <p class="fontSubtitle"><v-icon class="mr-2">mdi-wifi</v-icon>ACESSO ILIMITADO</p>
             <h1>Dê o primeiro passo em direção ao seu desenvolvimento profissional.</h1>
           </div>
-          <div class="justify-center spacingCol2">
+          <div class="justify-center  mx-auto  spacingCol2">
             <v-text-field
               class="emailInput"
               bg-color="#F6F5FF"
@@ -431,30 +429,13 @@ font-family: 'Sora', sans-serif;
 .dimensionImg {
   width: 470px;
   height: 600px;
+  margin-left: 50px;
 }
 
-.titleDiv2 {
-  margin-top: 40px;
-  margin-left: 15px;
-}
-
-@media screen and (max-width: 600px) {
-  .colCards {
-    margin-left: 0px ;
-    margin-right: 0px;
+.colCards {
+    max-width: 800px ;
+    margin-top: 40px ;
   }
-  .titleDiv2 {
-    margin-left: 30px ;
-    margin-right: 30px;
-  }
-}
-
-@media screen and (min-width: 960px) and (max-width: 1200px) {
-  .colCards {
-    margin-top: 50px ;
-  }
-}
-/* específico ^^^ */
 
 @media screen and (min-width: 960px) and (max-width: 1279px) {
   .imagemPrincipal {
@@ -465,6 +446,14 @@ font-family: 'Sora', sans-serif;
     margin-left: 80px !important;
     margin-right: -50px !important;
     align-items: center;
+  }
+
+}
+
+@media screen and (min-width: 960px) {
+  .margentexto {
+    margin-left: 4%;
+    margin-right: 4%;
   }
 }
 
@@ -578,10 +567,16 @@ font-family: 'Sora', sans-serif;
   .blueCard {
     height: 600px;
   }
+  .blueCard2 {
+    height: 600px;
+  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 960px) {
   .blueCard {
+    height: 500px;
+  }
+  .blueCard2 {
     height: 500px;
   }
 }
@@ -590,16 +585,25 @@ font-family: 'Sora', sans-serif;
   .blueCard {
     height: 262px;
   }
+  .blueCard2 {
+    height: 262px;
+  }
   .spacingCol1 {
     margin-top: 50px !important;
   }
   .spacingCol2 {
     margin-right: 50px !important;
   }
+  .spacingCol3 {
+    margin-top: 50px !important;
+  }
 }
 
 @media screen and (min-width: 961px) and (max-width: 995px) {
   .blueCard {
+    height: 280px;
+  }
+  .blueCard2 {
     height: 280px;
   }
 }
@@ -611,20 +615,33 @@ font-family: 'Sora', sans-serif;
   color: #FFFFFF;
 } 
 
-.marginTitle1 {
-  margin-left: 30%;
-} 
-
 @media screen and (max-width: 600px) {
   .marginTitle1 {
-    margin-left: 10%;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  .spacingPrincipalCards {
+    margin-left: 4%;
+    margin-right: 4%;
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 601px) and (max-width: 961px) {
   .marginTitle1 {
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .spacingTitle {
+    margin-right: 4% !important;
+    margin-left: 4% !important;
+  }
+}
+
+/*específico */ 
+@media screen and (min-width: 1040px) {
+  .spacingPrincipalCards {
+    margin-left: 2%;
+    margin-right: 2%;
   }
 }
 
@@ -695,6 +712,10 @@ font-family: 'Sora', sans-serif;
   .styleFaq {
     margin-left: 5px;
   }
+  .spacingTitle {
+    margin-right: 4% !important;
+    margin-left: 4% !important;
+  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 960px) {
@@ -740,7 +761,6 @@ font-family: 'Sora', sans-serif;
     padding-right: 50px !important;
   }
 }
-
 
 .marginTitle {
   margin-left: 25%;
@@ -813,16 +833,14 @@ v-card-title {
 .blueCard2 {
   background-color: #161B33;
   width: 1128px;
-  height: 262px;
   border-radius: 30px;
-  margin-top: 70px;
   margin-bottom: 15px;
 }
 
 .spacingCol3 {
-  margin-top: 65px;
-  margin-left: 60px;
-  margin-right: 30px;
+  margin-top: 60px;
+  margin-left: 50px;
+  margin-right: 40px;
   color: #FFFFFF;
 }
 
