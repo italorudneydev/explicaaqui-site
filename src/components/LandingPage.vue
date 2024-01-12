@@ -1,117 +1,117 @@
 <template>
   <v-app>
-
-      <v-card variant="flat" class="principalCard">
-        <div class="spacingCol d-flex flex-column flex-md-row flex-lg-row justify-space-between">
-          <div class="divText pa-5 mt-12"> 
-            <p class="titlename"><v-icon>mdi-flash</v-icon>PLATAFORMA EXCLUSIVA</p>
-            <h1 class="mt-4 mb-5">Conecte-se com outros servidores públicos e amplie seu conhecimento</h1>
-            <p class="mr-3">
-              Com o Explica Aqui, você tira suas dúvidas, aprende com os melhores especialistas e constrói uma rede de contatos para se manter atualizado e avançar na carreira.
+    <v-card variant="flat" class="principalCard">
+    <div class="spacingCol d-flex flex-column flex-md-row flex-lg-row justify-space-between">
+        <div class="divText pa-5 mt-12"> 
+        <p class="titlename"><v-icon>mdi-flash</v-icon>PLATAFORMA EXCLUSIVA</p>
+        <h1 class="mt-4 mb-5">Conecte-se com outros servidores públicos e amplie seu conhecimento</h1>
+        <p class="mr-3">
+            Com o Explica Aqui, você tira suas dúvidas, aprende com os melhores especialistas e constrói uma rede de contatos para se manter atualizado e avançar na carreira.
+        </p>
+        <div class="d-flex flex-column flex-md-row justify-space-between">
+            <v-text-field
+            class="insertButton"
+            bg-color="#FFFFFF"
+            variant="flat"
+            density="compact"
+            rounded="xl"
+            placeholder="Insira seu e-mail"
+            >
+            </v-text-field> 
+            <v-btn 
+            rounded="xl" 
+            class="registerButton"
+            >CADASTRE-SE AGORA
+            </v-btn>
+        </div>
+        </div>
+        <div class="pa-5"> 
+        <div class="imagemPrincipal mx-auto"> 
+            <v-img
+            aspect-ratio="16/9"
+            cover
+            src="/src/assets/tablet-digital-pode-resolver-o-problema 1.png"
+            ></v-img>
+            <v-img
+            class="spacingImage1"
+            src="/src/assets/image-PhotoRoom.png-PhotoRoom.png"
+            >
+            </v-img>
+            <v-img
+            src="/src/assets/tiresuaduvida.png"
+            class="spacingImage2"
+            >
+            </v-img>
+        </div>
+        </div>
+    </div>
+    </v-card>
+    <div class="principalDiv d-flex mx-auto flex-column flex-lg-row">
+    <div class="mx-auto marginBorder">
+        <img src="/src/assets/image-removebg.png" class="dimensionImg" />
+    </div>
+    <div class="mx-auto justify-center colCards">
+        <h1 class="spacingTitle justify-center">
+            Aprenda, colabore com colegas e se desenvolva profissionalmente
+        </h1>
+        <v-row>
+            <v-col
+            v-for="(variant, i) in variants"
+            :key="i"
+            cols="12"
+            md="12"
+            lg="6"
+            xl="5"
+            class="testeee"
+            >
+            <v-card class="mx-auto secondCard" variant="flat">
+                <v-card-item>
+                <div class="spacingContent">
+                    <v-sheet class="cardIcons" variant="tonal" :color="colors[i]">
+                    <v-icon :color="colorIcon[i]" size="17" class="colorIcon">
+                        {{ variant.icon }}
+                    </v-icon>
+                    </v-sheet>
+                    <h6 class="classTitle">{{ variant.title }}</h6>
+                    <div>{{ variant.description }}</div>
+                    <v-divider
+                    class="mt-7 d-md-none d-xl-none d-lg-none"
+                    :thickness="2"
+                    ></v-divider>
+                </div>
+                </v-card-item>
+            </v-card>
+            </v-col>
+        </v-row>
+    </div>
+    </div>
+    <div class="d-flex justify-center mt-12">
+    <v-card class="blueCard">
+        <div class="d-flex justify-center flex-column flex-md-row">
+        <div class="spacingCol1">
+            <p class="fontSubtitle">
+            <v-icon class="mr-2">mdi-cellphone-link</v-icon>DISPONÍVEL EM
+            TODAS AS PLATAFORMAS
             </p>
-            <div class="d-flex flex-column flex-md-row justify-space-between">
-              <v-text-field
-                class="insertButton"
-                bg-color="#FFFFFF"
-                variant="flat"
-                density="compact"
-                rounded="xl"
-                placeholder="Insira seu e-mail"
-              >
-              </v-text-field> 
-              <v-btn 
-                rounded="xl" 
-                class="registerButton"
-              >CADASTRE-SE AGORA
-              </v-btn>
-            </div>
-          </div>
-          <div class="pa-5"> 
-            <div class="imagemPrincipal mx-auto"> 
-              <v-img
-                aspect-ratio="16/9"
-                cover
-                src="/src/assets/tablet-digital-pode-resolver-o-problema 1.png"
-              ></v-img>
-              <v-img
-                class="spacingImage1"
-                src="/src/assets/image-PhotoRoom.png-PhotoRoom.png"
-              >
-              </v-img>
-              <v-img
-                src="/src/assets/tiresuaduvida.png"
-                class="spacingImage2"
-              >
-              </v-img>
-            </div>
-          </div>
-        </div>
-      </v-card>
-      <div class="principalDiv d-flex mx-auto flex-column flex-md-row flex-lg-row">
-        <div>
-          <img src="/src/assets/image-removebg.png" class="dimensionImg" />
-        </div>
-        <div class="mx-auto justify-center colCards">
-            <h1 class="spacingTitle justify-center">
-              Aprenda, colabore com colegas e se desenvolva profissionalmente
+            <h1>
+            Junte-se à maior comunidade de servidores públicos do Brasil.
             </h1>
-            <v-row>
-              <v-col
-                v-for="(variant, i) in variants"
-                :key="i"
-                cols="12"
-                md="12"
-                lg="6"
-                xl="5"
-              >
-                <v-card class="mx-auto secondCard" variant="flat">
-                  <v-card-item>
-                    <div class="spacingContent">
-                      <v-sheet class="cardIcons" variant="tonal" :color="colors[i]">
-                        <v-icon :color="colorIcon[i]" size="17" class="colorIcon">
-                          {{ variant.icon }}
-                        </v-icon>
-                      </v-sheet>
-                      <h6 class="classTitle">{{ variant.title }}</h6>
-                      <div>{{ variant.description }}</div>
-                      <v-divider
-                        class="mt-7 d-md-none d-xl-none d-lg-none"
-                        :thickness="2"
-                      ></v-divider>
-                    </div>
-                  </v-card-item>
-                </v-card>
-              </v-col>
-            </v-row>
         </div>
-      </div>
-      <div class="d-flex justify-center mt-12">
-        <v-card class="blueCard">
-          <div class="d-flex justify-center flex-column flex-md-row">
-            <div class="spacingCol1">
-              <p class="fontSubtitle">
-                <v-icon class="mr-2">mdi-cellphone-link</v-icon>DISPONÍVEL EM
-                TODAS AS PLATAFORMAS
-              </p>
-              <h1>
-                Junte-se à maior comunidade de servidores públicos do Brasil.
-              </h1>
-            </div>
-            <div class="justify-center mx-auto spacingCol2">
-              <v-text-field
-                class="emailInput"
-                bg-color="#F6F5FF"
-                variant="flat"
-                density="compact"
-                rounded="xl"
-                placeholder="Digite seu e-mail"
-              >
-              </v-text-field>
-              <v-btn rounded="xl" class="btnRegister">CADASTRE-SE AGORA </v-btn>
-            </div>
-          </div>
-        </v-card>
-      </div>
+        <div class="justify-center mx-auto spacingCol2">
+            <v-text-field
+            class="emailInput"
+            bg-color="#F6F5FF"
+            variant="flat"
+            density="compact"
+            rounded="xl"
+            placeholder="Digite seu e-mail"
+            >
+            </v-text-field>
+            <v-btn rounded="xl" class="btnRegister">CADASTRE-SE AGORA </v-btn>
+        </div>
+        </div>
+    </v-card>
+    </div>
 
     <div class="mt-10">
       <div>
@@ -233,24 +233,24 @@
         <h1>Perguntas Frequentes</h1>
       </div>
       <div class="spacingCols">
-        <v-list v-model:opened="open">
-          <v-list-group v-for="(item, i) in items" :key="i" :value="item.title">
-            <template v-slot:activator="{ props }">
-              <v-list-item v-bind="props" class="bold-title">{{ item.title }}
-              </v-list-item>
-              <v-divider :thickness="2"></v-divider>
-            </template>
-            <v-list-item
-              v-for="title in item.expandedText.split('\n')"
-              :key="title"
-              class="ml-n4"
-              >
-              {{ title }}
-            </v-list-item>
-          </v-list-group>
-        </v-list>
+            <v-list v-model:opened="open">
+            <v-list-group v-for="(item, i) in items" :key="i" :value="item.title">
+                <template v-slot:activator="{ props }">
+                <v-list-item v-bind="props" class="bold-title">{{ item.title }}
+                </v-list-item>
+                <v-divider :thickness="2"></v-divider>
+                </template>
+                <v-list-item
+                v-for="title in item.expandedText.split('\n')"
+                :key="title"
+                class="ml-n4"
+                >
+                {{ title }}
+                </v-list-item>
+            </v-list-group>
+            </v-list>
+        </div>
       </div>
-    </div>
 
     <div class="d-flex justify-center mt-12">
       <v-card class="blueCard2">
@@ -286,7 +286,8 @@
 import { VApp } from 'vuetify/lib/components/index.mjs';
 
 export default {
-  data() {
+
+  data() {  
     return {
       colors: ['#F6F5FF','#FFF6FA','#FEF9D5CC', '#F3F3F5'],
       colorIcon: ['#4E42FF','#FF57A7','#FFDE13', '#1C1B1F'],
@@ -427,9 +428,8 @@ font-family: 'Sora', sans-serif;
 }
 
 .dimensionImg {
-  width: 470px;
+  width: 600px;
   height: 600px;
-  margin-left: 50px;
 }
 
 .colCards {
@@ -563,6 +563,15 @@ font-family: 'Sora', sans-serif;
   margin-bottom: 15px;
 }
 
+.marginBorder {
+  margin-left: 80px !important;
+}
+
+.testeee {
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
 @media screen and (max-width: 600px) {
   .blueCard {
     height: 600px;
@@ -683,9 +692,9 @@ font-family: 'Sora', sans-serif;
   background-color: #4E42FF1A;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 601px) {
 .purpleCard {
-  height: 1850px;
+  height: 1750px;
 }
 .marginTitle {
   margin-left: 2px !important;
@@ -715,10 +724,11 @@ font-family: 'Sora', sans-serif;
   .spacingTitle {
     margin-right: 4% !important;
     margin-left: 4% !important;
+    margin-bottom: 4%;
   }
 }
 
-@media screen and (min-width: 601px) and (max-width: 960px) {
+@media screen and (min-width: 602px) and (max-width: 960px) {
   .purpleCard {
     height: 1400px;
   }
@@ -730,7 +740,7 @@ font-family: 'Sora', sans-serif;
     margin-bottom: 30px;
   }
   .spacingCols {
-    width: 350px !important;
+    width: 450px !important;
   }
 }
 
@@ -834,7 +844,7 @@ v-card-title {
   background-color: #161B33;
   width: 1128px;
   border-radius: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .spacingCol3 {
