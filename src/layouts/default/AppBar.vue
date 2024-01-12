@@ -1,51 +1,42 @@
 <template>
-  <v-app-bar flat>
-    <div class="divPrincipal d-flex">
-      <div class="me-auto">
-        <v-img 
-          :width="200"
-          :height="38"
-          src="/src/assets/Logo-padrão.png"
-        ></v-img>
+  <v-main>
+    <v-card clas="header">
+      <div class="justify-center d-flex">
+        <div class="me-auto d-none d-md-flex d-lg-flex d-xl-flex">
+          <v-img 
+            :width="200"
+            :height="38"
+            src="/src/assets/Logo-padrão.png"
+          ></v-img>
+        </div>
+        <div class="d-sm-flex d-md-none">
+          <v-img 
+            :width="200"
+            :height="38"
+            src="/src/assets/Logo-icone.png"
+          ></v-img>
+        </div>
+        <div class="spacingText d-none d-md-flex d-lg-flex d-xl-flex">
+          <v-btn variant="text">BENEFÍCIOS</v-btn>
+          <v-btn variant="text">COMO FUNCIONA</v-btn>
+          <v-btn variant="text">PLANOS</v-btn>
+          <v-btn variant="text">FAQ</v-btn>
+          <v-btn variant="outlined" rounded="xl">Cadastre-se agora</v-btn>
+        </div>
       </div>
-      <div class="spacingText">
-        <v-btn variant="text">BENEFÍCIOS</v-btn>
-        <v-btn variant="text">COMO FUNCIONA</v-btn>
-        <v-btn variant="text">PLANOS</v-btn>
-        <v-btn variant="text">FAQ</v-btn>
-        <v-btn variant="outlined" rounded="xl">Cadastre-se agora</v-btn>
-      </div>
-    </div>
-  </v-app-bar>
+    </v-card>
+  </v-main>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      itemsDownload: [
-        { iconSrc: "/src/assets/icons8-mac-os-60.png", description1: "Grátis na", description2: "App store" },
-        { iconSrc: "/src/assets/icons8-google-play-60.png", description1: "Grátis na", description2: "Play store" },
-      ]
-    }
-  }
-}
-</script>
 
 <style>
 
-.divPrincipal {
-  margin-top: 2%;
-  margin-left: 15%;
-  margin-right: 15%;
+.header {
+  background-color: #4E42FF0D;
+  height: 200px;
 }
 
 .spacingText {
-  margin-right: -30%;
-}
-
-.spacingImg {
-  margin-right: 400px;
+  margin-right: 0%;
 }
 
 </style>
