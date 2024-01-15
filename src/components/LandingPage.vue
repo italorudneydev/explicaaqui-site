@@ -50,40 +50,40 @@
     <div class="mx-auto marginBorder">
         <img src="/src/assets/image-removebg.png" class="dimensionImg" />
     </div>
-    <div class="mx-auto justify-center colCards">
-        <h1 class="spacingTitle justify-center">
-            Aprenda, colabore com colegas e se desenvolva profissionalmente
-        </h1>
-        <v-row>
-            <v-col
-            v-for="(variant, i) in variants"
-            :key="i"
-            cols="12"
-            md="12"
-            lg="6"
-            xl="5"
-            class="testeee"
-            >
-            <v-card class="mx-auto secondCard" variant="flat">
-                <v-card-item>
-                <div class="spacingContent">
-                    <v-sheet class="cardIcons" variant="tonal" :color="colors[i]">
-                    <v-icon :color="colorIcon[i]" size="17" class="colorIcon">
-                        {{ variant.icon }}
-                    </v-icon>
-                    </v-sheet>
-                    <h6 class="classTitle">{{ variant.title }}</h6>
-                    <div>{{ variant.description }}</div>
-                    <v-divider
-                    class="mt-7 d-md-none d-xl-none d-lg-none"
-                    :thickness="2"
-                    ></v-divider>
-                </div>
-                </v-card-item>
-            </v-card>
-            </v-col>
-        </v-row>
-    </div>
+      <div class="mx-auto justify-center colCards">
+          <h1 class="spacingTitle justify-center">
+              Aprenda, colabore com colegas e se desenvolva profissionalmente
+          </h1>
+          <v-row>
+              <v-col
+              v-for="(variant, i) in variants"
+              :key="i"
+              cols="12"
+              md="12"
+              lg="6"
+              xl="5"
+              class="testeee"
+              >
+              <v-card class="mx-auto secondCard" variant="flat">
+                  <v-card-item>
+                  <div class="spacingContent">
+                      <v-sheet class="cardIcons" variant="tonal" :color="colors[i]">
+                      <v-icon :color="colorIcon[i]" size="17" class="colorIcon">
+                          {{ variant.icon }}
+                      </v-icon>
+                      </v-sheet>
+                      <h6 class="classTitle">{{ variant.title }}</h6>
+                      <div>{{ variant.description }}</div>
+                      <v-divider
+                      class="mt-7 d-md-none d-xl-none d-lg-none"
+                      :thickness="2"
+                      ></v-divider>
+                  </div>
+                  </v-card-item>
+              </v-card>
+              </v-col>
+          </v-row>
+      </div>
     </div>
     <div class="d-flex justify-center mt-12">
     <v-card class="blueCard">
@@ -115,10 +115,10 @@
 
     <div class="mt-10">
       <div>
-        <h1 class="marginTitle1 d-flex justify-center mb-12">
+        <h1 class="marginTitle1 d-flex mb-12">
           Comece sua jornada no Explica Aqui agora mesmo!
         </h1>
-        <div class=" flex-column d-flex justify-center mx-auto flex-md-row">
+        <div class="flex-column d-flex justify-center mx-auto flex-md-row">
           <div
             v-for="(itens, x) in itens2"
             :key="x"
@@ -418,6 +418,7 @@ font-family: 'Sora', sans-serif;
 .principalDiv {
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: 3%;
 }
 
 @media screen and (max-width: 600px) {
@@ -572,6 +573,10 @@ font-family: 'Sora', sans-serif;
   margin-left: -20px;
 }
 
+.spacingTitle {
+  margin-right: 25px;
+}
+
 @media screen and (max-width: 600px) {
   .blueCard {
     height: 600px;
@@ -623,6 +628,11 @@ font-family: 'Sora', sans-serif;
   margin-right: 40px;
   color: #FFFFFF;
 } 
+
+.marginTitle1 {
+  margin-left: 20%;
+  margin-right: 50%;
+}
 
 @media screen and (max-width: 600px) {
   .marginTitle1 {
