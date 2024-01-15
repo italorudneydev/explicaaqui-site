@@ -2,11 +2,11 @@
   <v-app>
     <v-card variant="flat" class="principalCard">
     <div class="spacingCol d-flex flex-column flex-md-row flex-lg-row justify-space-between">
-        <div class="divText pa-5 mt-12"> 
+      <div class="divText pa-5 mt-12"> 
         <p class="titlename"><v-icon>mdi-flash</v-icon>PLATAFORMA EXCLUSIVA</p>
         <h1 class="mt-4 mb-5">Conecte-se com outros servidores públicos e amplie seu conhecimento</h1>
         <p class="mr-3">
-            Com o Explica Aqui, você tira suas dúvidas, aprende com os melhores especialistas e constrói uma rede de contatos para se manter atualizado e avançar na carreira.
+          Com o Explica Aqui, você tira suas dúvidas, aprende com os melhores especialistas e constrói uma rede de contatos para se manter atualizado e avançar na carreira.
         </p>
         <div class="d-flex flex-column flex-md-row justify-space-between">
             <v-text-field
@@ -43,7 +43,7 @@
             >
             </v-img>
         </div>
-        </div>
+      </div>
     </div>
     </v-card>
     <div class="principalDiv d-flex mx-auto flex-column flex-lg-row">
@@ -410,8 +410,8 @@ font-family: 'Sora', sans-serif;
 
 @media screen and (min-width: 1600px) and (max-width: 1920px) {
   .divText {
-    margin-left: 8%;
-    margin-right: 8%;
+    margin-left: 10%;
+    margin-right: 12%;
   }
 }
 
