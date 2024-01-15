@@ -3,11 +3,11 @@
     <v-card class="footer">
       <div class="divPrincipal">
         <div class="d-flex flex-row firstLine">
-          <v-img 
+          <v-img
           clas="me-auto"
             :width="166"
             :height="32"
-            src="/src/assets/Logo-padrão.png"
+            src="/src/assets/logo.png"
           ></v-img>
           <v-btn class="spacingBtn" variant="text">CADASTRE-SE AGORA</v-btn>
         </div>
@@ -18,7 +18,7 @@
             <v-btn variant="text" size="x-large" src="/" icon="mdi-facebook"></v-btn>
             <v-btn icon size="x-large" variant="text">
               <v-avatar>
-                <v-img 
+                <v-img
                   class="twtter"
                   src="/src/assets/twitter-x.png"
                 ></v-img>
@@ -28,7 +28,7 @@
           <div class="d-flex flex-row">
             <v-sheet v-for="(itemDownload, index) in itemsDownload" :key="index" :height="40" color="#FFFFFF" class="mt-4 mr-4" :width="114" rounded>
               <div class="d-flex">
-                <v-img 
+                <v-img
                   class="ml-n9 mt-2"
                   :width="200"
                   :height="25"

@@ -3,14 +3,14 @@
     <v-card clas="header">
       <div class="justify-center d-flex">
         <div class="me-auto d-none d-md-flex d-lg-flex d-xl-flex">
-          <v-img 
+          <v-img
             :width="200"
             :height="38"
-            src="/src/assets/Logo-padrão.png"
+            src="/src/assets/logo.png"
           ></v-img>
         </div>
         <div class="d-sm-flex d-md-none">
-          <v-img 
+          <v-img
             :width="200"
             :height="38"
             src="/src/assets/Logo-icone.png"

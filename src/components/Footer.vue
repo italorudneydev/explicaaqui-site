@@ -3,11 +3,11 @@
     <v-card class="footer">
       <div class="divPrincipal">
         <v-row class="firstLine">
-            <v-img 
+            <v-img
             class="spacingImg"
             :width="166"
             :height="32"
-            src="/src/assets/Logo-padrão.png"
+            src="/src/assets/logo.png"
             ></v-img>
             <v-btn class="spacingBtn" variant="text">CADASTRE-SE AGORA</v-btn>
         </v-row>
@@ -18,7 +18,7 @@
             <v-btn variant="plain" size="x-large" class="mx-n12" src="/"><v-icon>mdi-instagram</v-icon></v-btn>
             <v-btn variant="plain" size="x-large" src="/"><v-icon>mdi-facebook</v-icon></v-btn>
             <v-btn variant="plain" class="imgTwitter" src="/">
-              <v-img 
+              <v-img
                 class=""
                 :width="200"
                 :height="25"
@@ -30,7 +30,7 @@
             <v-row>
               <v-sheet v-for="(itemDownload, index) in itemsDownload" :key="index" :height="40" color="#FFFFFF" class="mt-4 mr-4" :width="114" rounded>
                 <div class="d-flex">
-                  <v-img 
+                  <v-img
                     class="ml-n9 mt-2"
                     :width="200"
                     :height="25"
@@ -49,7 +49,7 @@
     </v-card>
   </footer>
 </template>
-  
+
 <script>
 export default {
   name: 'Footer',
@@ -115,4 +115,3 @@ footer {
 }
 
 </style>
-  
