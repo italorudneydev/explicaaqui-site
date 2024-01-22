@@ -46,16 +46,16 @@
       </div>
     </v-card>
 
-    <div class="spacingCol d-flex flex-column flex-md-column flex-lg-row justify-space-between">
-      <div class="principalImage2 mx-auto">
+    <div class="biggerDivSpacing d-flex flex-column flex-md-column flex-lg-row mx-auto">
+      <div class="mx-auto">
         <img class="dimensionImg" src="/src/assets/image-removebg.png"/>
       </div>
-      <div class="mt-12"> 
-        <h1 class="justify-center mx-auto mb-12">
+      <div class="mt-8"> 
+        <h1 class="mx-auto mb-12">
           Aprenda, colabore com colegas e se desenvolva profissionalmente
         </h1>
-        <div class="flex-column d-flex justify-center mx-auto flex-md-row"> 
-          <!--Melhorar lógica-->
+        <!--Melhorar lógica-->
+        <div class="flex-column d-flex mx-auto flex-md-row"> 
           <div 
             v-for="(variant, i) in variants.slice(0,2)" :key="i"
             class="spacingPrincipalCards d-flex justify-center"
@@ -85,7 +85,7 @@
             </v-card>
           </div>
         </div>
-        <div class="flex-column d-flex justify-center mx-auto flex-md-row"> 
+        <div class="flex-column d-flex mx-auto flex-md-row"> 
           <div 
             v-for="(variant, i) in variants.slice(2,4)"
             :key="i"
@@ -258,7 +258,7 @@
       </v-card>
     </div>
 
-    <div class="d-flex flex-column flex-md-row justify-center mt-12 mx-auto">
+    <div class="d-flex flex-column flex-md-row justify-center mt-12 mx-auto commonQuestions">
       <div class="mr-8">
         <p class="styleFaq"><v-icon class="pr-2">mdi-forum-plus</v-icon>FAQ</p>
         <h1>Perguntas Frequentes</h1>
@@ -413,11 +413,10 @@ font-family: 'Sora', sans-serif;
   height: 381px;
 }
 
-.principalImage2 {
-  margin-top: 35px;
-  margin-bottom: 150px;
-  width: 504px;
-  height: 381px;
+.biggerDivSpacing {
+  margin-top: 20px;
+  margin-left: 20% !important;
+  margin-right: 18% !important;
 }
 
 .spacingImage1 {
@@ -461,8 +460,8 @@ font-family: 'Sora', sans-serif;
 } 
 
 .marginTitle1 {
-  margin-left: 20%;
-  margin-right: 50%;
+  margin-left: 25%;
+  margin-right: 30%;
 }
 
 /*específico */ 
@@ -585,7 +584,6 @@ font-family: 'Sora', sans-serif;
   margin-right: 40px;
   color: #FFFFFF;
 }
-
 /*breakpoints */
 @media screen and (max-width: 599px) {
   .principalCard {
@@ -594,14 +592,7 @@ font-family: 'Sora', sans-serif;
   .principalImage {
     width: 320px !important;
     height: 230px !important;
-  }
-  .principalImage2 {
-    width: 320px !important;
-    height: 230px !important;
-  }
-  .dimensionImg {
-    width: 330px !important;
-    height: 436px !important;
+    padding-left: 20px;
   }
   .spacingImage1 {
     margin-top: -200px !important;
@@ -612,6 +603,10 @@ font-family: 'Sora', sans-serif;
     margin-top: 110px !important;
     margin-left: 130px !important;
     width: 170px !important;
+  }
+  .dimensionImg {
+    width: 330px !important;
+    height: 436px !important;
   }
   .blueCard {
     height: 600px;
@@ -630,6 +625,10 @@ font-family: 'Sora', sans-serif;
   .spacingPrincipalCards {
     margin-left: 4%;
     margin-right: 4%;
+  }
+  .titleLearn {
+    margin-left: 30px !important;
+    margin-right: 30px !important;
   }
   .principalDiv {
     margin-left: 10px ;
@@ -663,14 +662,22 @@ font-family: 'Sora', sans-serif;
   .styleFaq {
     margin-left: 5px;
   }
-
   .btnRegister {
     width: 295px;
   }
   .emailInput {
     width: 295px;
   }
-
+  .spacingCol1 {
+    margin-left: 30px;
+  } /* margem para conteúdo caber dentro do card */
+  .commonQuestions {
+    padding-left: 20px;
+  }
+  .biggerDivSpacing {
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+  }
 }
 
 @media screen and (min-width: 600px) and (max-width: 959px) {
@@ -695,9 +702,6 @@ font-family: 'Sora', sans-serif;
   .principalImage {
     margin-left: 5px;
   }
-  .principalImage2 {
-    padding-left: 90px ;
-  }
   .purpleCard {
     height: 1400px;
   }
@@ -719,6 +723,13 @@ font-family: 'Sora', sans-serif;
     margin-left: 5%;
     margin-right: 5%;
   }
+  .commonQuestions {
+    margin-left: 15px;
+  }
+  .titleLearn {
+    margin-left: 100px !important;
+    margin-right: 10px !important;
+  }
 }
 
 @media screen and (min-width: 960px) and (max-width: 1279px) {
@@ -734,12 +745,8 @@ font-family: 'Sora', sans-serif;
   .dimensionImg {
     width: 330px !important;
     height: 436px !important;
-  }
-  .principalImage2 {
-    width: 320px !important;
-    height: 230px !important;
-    margin-top: 90px !important;
-    justify-content: center;
+    margin-top: 50px;
+    margin-right: 50px;
   }
   .spacingImage1 {
     margin-top: -200px;
@@ -759,8 +766,8 @@ font-family: 'Sora', sans-serif;
     height: 262px;
   }
   .blueCard2 {
-    height: 262px;
-  }
+    height: 280px;
+  } /* texto desce quando atinge x dimensão */
   /* 
   (min-width: 960px) and (max-width: 995px)
   .blueCard {
@@ -772,6 +779,7 @@ font-family: 'Sora', sans-serif;
   */
   .spacingCol1 {
     margin-top: 50px !important;
+    margin-right: 10px;
   }
   .spacingCol2 {
     margin-right: 50px !important;
@@ -784,6 +792,13 @@ font-family: 'Sora', sans-serif;
   }
   .subCard2 {
     padding-left: 45px;
+  }
+  .commonQuestions {
+    padding-left: 20px;
+  } 
+  .titleLearn {
+    margin-left: 220px !important;
+    margin-right: 100px !important;
   }
 }
 
@@ -804,7 +819,15 @@ font-family: 'Sora', sans-serif;
     width: 280px; 
   }
   .principalImage {
-    margin-left: 60px !important;
+    margin-right: 0px !important;
+  }
+  .titleLearn {
+    margin-left: 150px !important;
+    margin-right: 100px !important;
+  }
+  .dimensionImg {
+    margin-top: 50px;
+    margin-right: 50px;
   }
 } 
 
@@ -812,13 +835,6 @@ font-family: 'Sora', sans-serif;
   .divText {
     margin-left: 10%;
     margin-right: 12%;
-  }
-}
-
-@media screen and (min-width: 1040px) {
-  .spacingPrincipalCards {
-    margin-left: 2%;
-    margin-right: 2%;
   }
 }
 
@@ -847,6 +863,19 @@ font-family: 'Sora', sans-serif;
   .marginTitle {
     margin-left: 20px !important;
     padding-right: 50px !important;
+  }
+  .spacingCol3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .spacingCol2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-right: 20px;
+  }
+  .spacingCol1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 
