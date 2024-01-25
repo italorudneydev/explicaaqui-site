@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <v-app>
     <v-card variant="flat" class="principalCard">
       <div class="spacingCol d-flex flex-column flex-md-row flex-lg-row justify-space-between">
@@ -315,8 +316,12 @@
 
 <script>
 import { VApp } from 'vuetify/lib/components/index.mjs';
+import Header from '@/components/Header.vue'; // Certifique-se de ajustar o caminho conforme a estrutura do seu projeto
 
 export default {
+  components: {
+    Header
+  },
   data() {  
     return {
       colors: ['#F6F5FF','#FFF6FA','#FEF9D5CC', '#F3F3F5'],
