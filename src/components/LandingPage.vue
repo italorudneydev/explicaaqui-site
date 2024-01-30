@@ -2,7 +2,7 @@
   <Header />
   <v-app id="home">
     <v-card variant="flat" class="principalCard">
-      <div class="spacingCol d-flex flex-column flex-md-row flex-lg-row justify-space-between">
+      <div class="spacingCol d-flex flex-column flex-md-row flex-lg-row justify-center">
         <div class="divText pa-5 mt-12"> 
           <p class="titlename"><v-icon>mdi-flash</v-icon>PLATAFORMA EXCLUSIVA</p>
           <h1 class="mt-4 mb-5">Conecte-se com outros servidores públicos e amplie seu conhecimento</h1>
@@ -822,8 +822,8 @@ font-family: 'Sora', sans-serif;
 
 @media screen and (min-width: 1280px) and (max-width: 1920px) {
   .spacingCol {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
   .spacingCardsIconsLearn {
     width: 280px; 
@@ -844,7 +844,8 @@ font-family: 'Sora', sans-serif;
 @media screen and (min-width: 1600px) and (max-width: 1920px) {
   .divText {
     margin-left: 10%;
-    margin-right: 12%;
+    margin-right: 10%;
+    max-width: 500px;
   }
 }
 
@@ -886,6 +887,10 @@ font-family: 'Sora', sans-serif;
   .spacingCol1 {
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+  .divText {
+    max-width: 500px;
+    margin-right: 50px;
   }
 }
 
