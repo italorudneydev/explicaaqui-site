@@ -1,6 +1,6 @@
 <template>
   <v-main overflow-y:auto>
-    <v-navigation-drawer  class="w-100" temporary location="right" hide-overlay @resize="checkWindowSize" v-model="drawer"> <!--dentro do menu-->
+    <v-navigation-drawer class="w-100" temporary location="right" hide-overlay @resize="checkWindowSize" v-model="drawer"> <!--dentro do menu-->
       <v-list class="d-flex mx-auto"> <!--menu pequeno-->
         <v-img
           src="/src/assets/Logo-icone.png"
@@ -52,16 +52,17 @@
       </div>
     </v-navigation-drawer>
 
-    <v-app-bar :elevation="0">
+    <v-app-bar :elevation="0.5">
       <div class="me-auto d-none d-md-flex">
         <v-img 
           :width="200"
           :height="38"
           src="/src/assets/Logo-padrao.png"
           @click="scroll('home')"
+          class="distanceLeft"
         ></v-img>
       </div>
-      <div class="d-none d-md-flex"> 
+      <div class="d-none d-md-flex distanceRight"> 
         <v-btn variant="plain" color="#000000" @click="scroll('beneficios')">BENEFÍCIOS</v-btn>
         <v-btn variant="plain" color="#000000" @click="scroll('comoFunciona')">COMO FUNCIONA</v-btn>
         <v-btn variant="plain" color="#000000" @click="scroll('planos')">PLANOS</v-btn>
@@ -159,6 +160,16 @@ export default {
     margin-top: 18px;
   }
 }
+
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+  .distanceLeft {
+    margin-left: 20% !important;
+  }
+  .distanceRight {
+    margin-right: 2% !important;
+  }
+}
+
   
 .dimensionImage {
   cursor: pointer;
@@ -187,6 +198,14 @@ export default {
 
 .align-center {
   align-items: center;
+}
+
+.distanceLeft {
+  margin-left: 50%;
+}
+
+.distanceRight {
+  margin-right: 5%;
 }
 
 </style>
