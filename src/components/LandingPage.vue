@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <v-app>
+  <v-app id="home">
     <v-card variant="flat" class="principalCard">
       <div class="spacingCol d-flex flex-column flex-md-row flex-lg-row justify-space-between">
         <div class="divText pa-5 mt-12"> 
@@ -46,79 +46,80 @@
         </div>
       </div>
     </v-card>
-
-    <div class="biggerDivSpacing d-flex flex-column flex-md-column flex-lg-row mx-auto">
-      <div class="mx-auto">
-        <img class="dimensionImg" src="/src/assets/image-removebg.png"/>
-      </div>
-      <div class="mt-8"> 
-        <h1 class="mx-auto mb-12">
-          Aprenda, colabore com colegas e se desenvolva profissionalmente
-        </h1>
-        <!--Melhorar lógica-->
-        <div class="flex-column d-flex mx-auto flex-md-row"> 
-          <div 
-            v-for="(variant, i) in variants.slice(0,2)" :key="i"
-            class="spacingPrincipalCards d-flex justify-center"
-          >
-            <v-card class="spacingCardsIconsLearn" variant="flat">
-              <v-card-item>
-                <div>
-                  <v-sheet
-                    :height="40"
-                    :width="40"
-                    variant="tonal" 
-                    :color="colors[i]"
-                    rounded="lg"
-                  >
-                    <v-icon :color="colorIcon[i]" size="17" class="colorIcon">
-                      {{ variant.icon }}
-                    </v-icon>
-                  </v-sheet>
-                  <h6 class="classTitle">{{ variant.title }}</h6>
-                  <div>{{ variant.description }}</div>
-                </div>
-              </v-card-item>
-              <v-divider
-                class="mt-7 d-md-none d-xl-none d-lg-none"
-                :thickness="2"
-              ></v-divider>
-            </v-card>
+  <v-container id="beneficios">
+      <div class="biggerDivSpacing d-flex flex-column flex-md-column flex-lg-row mx-auto">
+        <div class="mx-auto">
+          <img class="dimensionImg" src="/src/assets/image-removebg.png"/>
+        </div>
+        <div class="mt-8"> 
+          <h1 class="mx-auto mb-12">
+            Aprenda, colabore com colegas e se desenvolva profissionalmente
+          </h1>
+          <!--Melhorar lógica-->
+          <div class="flex-column d-flex mx-auto flex-md-row"> 
+            <div 
+              v-for="(variant, i) in variants.slice(0,2)" :key="i"
+              class="spacingPrincipalCards d-flex justify-center"
+            >
+              <v-card class="spacingCardsIconsLearn" variant="flat">
+                <v-card-item>
+                  <div>
+                    <v-sheet
+                      :height="40"
+                      :width="40"
+                      variant="tonal" 
+                      :color="colors[i]"
+                      rounded="lg"
+                    >
+                      <v-icon :color="colorIcon[i]" size="17" class="colorIcon">
+                        {{ variant.icon }}
+                      </v-icon>
+                    </v-sheet>
+                    <h6 class="classTitle">{{ variant.title }}</h6>
+                    <div>{{ variant.description }}</div>
+                  </div>
+                </v-card-item>
+                <v-divider
+                  class="mt-7 d-md-none d-xl-none d-lg-none"
+                  :thickness="2"
+                ></v-divider>
+              </v-card>
+            </div>
+          </div>
+          <div class="flex-column d-flex mx-auto flex-md-row"> 
+            <div 
+              v-for="(variant, i) in variants.slice(2,4)"
+              :key="i"
+              class="spacingPrincipalCards d-flex justify-center"
+            >
+              <v-card class="spacingCardsIconsLearn" variant="flat">
+                <v-card-item>
+                  <div>
+                    <v-sheet
+                      :height="40"
+                      :width="40"
+                      variant="tonal" 
+                      :color="colors[i]"
+                      rounded="lg"
+                    >
+                      <v-icon :color="colorIcon[i]" size="17" class="colorIcon">
+                        {{ variant.icon }}
+                      </v-icon>
+                    </v-sheet>
+                    <h6 class="classTitle">{{ variant.title }}</h6>
+                    <div>{{ variant.description }}</div>
+                  </div>
+                </v-card-item>
+                <v-divider
+                  class="mt-7 d-md-none d-xl-none d-lg-none"
+                  :thickness="2"
+                ></v-divider>
+              </v-card>
+            </div>
           </div>
         </div>
-        <div class="flex-column d-flex mx-auto flex-md-row"> 
-          <div 
-            v-for="(variant, i) in variants.slice(2,4)"
-            :key="i"
-            class="spacingPrincipalCards d-flex justify-center"
-          >
-            <v-card class="spacingCardsIconsLearn" variant="flat">
-              <v-card-item>
-                <div>
-                  <v-sheet
-                    :height="40"
-                    :width="40"
-                    variant="tonal" 
-                    :color="colors[i]"
-                    rounded="lg"
-                  >
-                    <v-icon :color="colorIcon[i]" size="17" class="colorIcon">
-                      {{ variant.icon }}
-                    </v-icon>
-                  </v-sheet>
-                  <h6 class="classTitle">{{ variant.title }}</h6>
-                  <div>{{ variant.description }}</div>
-                </div>
-              </v-card-item>
-              <v-divider
-                class="mt-7 d-md-none d-xl-none d-lg-none"
-                :thickness="2"
-              ></v-divider>
-            </v-card>
-          </div>
-        </div>
       </div>
-    </div>
+  </v-container>
 
     <div class="d-flex justify-center mt-12">
       <v-card class="blueCard">
@@ -142,12 +143,12 @@
               placeholder="Digite seu e-mail"
             >
             </v-text-field>
-            <v-btn rounded="xl" class="mx-auto btnRegister">CADASTRE-SE AGORA </v-btn>
+            <v-btn rounded="xl" class="mx-auto btnRegister" id="comoFunciona">CADASTRE-SE AGORA </v-btn>
           </div>
         </div>
       </v-card>
     </div>
-    
+
     <div class="mt-10">
       <div>
         <h1 class="marginTitle1 d-flex mb-12">
@@ -187,102 +188,106 @@
         </div>
       </div>
     </div>
+      
+    <span id="planos">
+      <div class="d-flex justify-center mt-12">
+        <v-card variant="flat" class="purpleCard justify-center text-center">
+          <v-col class="marginTitle">
+            <h1>Escolha o plano que melhor atende às suas necessidades</h1>
+          </v-col>
+          <div class="d-flex justify-center flex-column flex-md-row mt-10">
+            <v-card 
+              variant="flat" 
+              class="subCard1 mx-auto"
+            >
+              <h1 class="mt-8 mb-3">Gratuito</h1>
+              <p>A escolha perfeita para quem busca uma introdução à nossa comunidade.</p>
+              <v-row class="mt-5 mb-5 pl-4">
+                <p class="pt-6">R$</p>
+                <h1 class="priceFont">0</h1>
+              </v-row>
+              <v-divider></v-divider>
+              <div v-for="(list, z) in miniumList" :key="z">
+                <p class="mt-5 mb-5">
+                  <v-icon size="24" class="pr-3">{{ list.icon }}</v-icon>
+                  {{ list.text }}
+                </p>
+              </div>
+              <v-divider></v-divider>
+              <v-text-field
+                class="emailInput2"
+                variant="outlined"
+                density="compact"
+                rounded="xl"
+                placeholder="Insira seu e-mail"
+              >
+              </v-text-field>
+              <v-btn 
+                rounded="xl" 
+                class="btnRegister2"
+                variant="outlined"
+              >CADASTRE-SE AGORA</v-btn>
+            </v-card>
+            <v-card align="start" variant="flat" class="subCard2 mx-auto">
+              <h1 class="mt-8 mb-4">
+                <v-icon>mdi-asterisk</v-icon>
+                Premium
+              </h1>
+              <p>Uma experiência que vai além das expectativas. Sua ascensão profissional começa aqui.</p>
+              <v-row class="mt-5 mb-5 pl-4">
+                <p class="pt-6">R$</p>
+                <h1 class="priceFont">19,90</h1>
+                <p class="pt-6 pl-2">/ MÊS</p>
+              </v-row>
+              <v-divider></v-divider>
+              <div v-for="(list2, y) in miniumList2" :key="y">
+                <p class="mt-5 mb-5"><v-icon size="24" class="pr-3">{{ list2.icon }}</v-icon>{{ list2.text }}</p>
+              </div>
+              <v-divider></v-divider>
+              <v-text-field
+                class="emailInput3"
+                variant="outlined"
+                density="compact"
+                rounded="xl"
+                placeholder="Insira seu e-mail"
+              >
+              </v-text-field>
+              <v-btn 
+                rounded="xl" 
+                class="btnRegister"
+              >CADASTRE-SE AGORA</v-btn>
+            </v-card>
+          </div>
+        </v-card>
+      </div>
+    </span>
 
-    <div class="d-flex justify-center mt-12">
-      <v-card variant="flat" class="purpleCard justify-center text-center">
-        <v-col class="marginTitle">
-          <h1>Escolha o plano que melhor atende às suas necessidades</h1>
-        </v-col>
-        <div class="d-flex justify-center flex-column flex-md-row mt-10">
-          <v-card 
-            variant="flat" 
-            class="subCard1 mx-auto"
-          >
-            <h1 class="mt-8 mb-3">Gratuito</h1>
-            <p>A escolha perfeita para quem busca uma introdução à nossa comunidade.</p>
-            <v-row class="mt-5 mb-5 pl-4">
-              <p class="pt-6">R$</p>
-              <h1 class="priceFont">0</h1>
-            </v-row>
-            <v-divider></v-divider>
-            <div v-for="(list, z) in miniumList" :key="z">
-              <p class="mt-5 mb-5">
-                <v-icon size="24" class="pr-3">{{ list.icon }}</v-icon>
-                {{ list.text }}
-              </p>
-            </div>
-            <v-divider></v-divider>
-            <v-text-field
-              class="emailInput2"
-              variant="outlined"
-              density="compact"
-              rounded="xl"
-              placeholder="Insira seu e-mail"
-            >
-            </v-text-field>
-            <v-btn 
-              rounded="xl" 
-              class="btnRegister2"
-              variant="outlined"
-            >CADASTRE-SE AGORA</v-btn>
-          </v-card>
-          <v-card align="start" variant="flat" class="subCard2 mx-auto">
-            <h1 class="mt-8 mb-4">
-              <v-icon>mdi-asterisk</v-icon>
-              Premium
-            </h1>
-            <p>Uma experiência que vai além das expectativas. Sua ascensão profissional começa aqui.</p>
-            <v-row class="mt-5 mb-5 pl-4">
-              <p class="pt-6">R$</p>
-              <h1 class="priceFont">19,90</h1>
-              <p class="pt-6 pl-2">/ MÊS</p>
-            </v-row>
-            <v-divider></v-divider>
-            <div v-for="(list2, y) in miniumList2" :key="y">
-              <p class="mt-5 mb-5"><v-icon size="24" class="pr-3">{{ list2.icon }}</v-icon>{{ list2.text }}</p>
-            </div>
-            <v-divider></v-divider>
-            <v-text-field
-              class="emailInput3"
-              variant="outlined"
-              density="compact"
-              rounded="xl"
-              placeholder="Insira seu e-mail"
-            >
-            </v-text-field>
-            <v-btn 
-              rounded="xl" 
-              class="btnRegister"
-            >CADASTRE-SE AGORA</v-btn>
-          </v-card>
+    <span id="faq">
+      <div class="d-flex flex-column flex-md-row justify-center mt-12 mx-auto commonQuestions">
+        <div class="mr-8">
+          <p class="styleFaq"><v-icon class="pr-2">mdi-forum-plus</v-icon>FAQ</p>
+          <h1>Perguntas Frequentes</h1>
         </div>
-      </v-card>
-    </div>
-
-    <div class="d-flex flex-column flex-md-row justify-center mt-12 mx-auto commonQuestions">
-      <div class="mr-8">
-        <p class="styleFaq"><v-icon class="pr-2">mdi-forum-plus</v-icon>FAQ</p>
-        <h1>Perguntas Frequentes</h1>
+        <div class="spacingCols">
+          <v-list v-model:opened="open">
+          <v-list-group v-for="(item, i) in items" :key="i" :value="item.title">
+            <template v-slot:activator="{ props }">
+            <v-list-item v-bind="props" class="bold-title">{{ item.title }}
+            </v-list-item>
+            <v-divider :thickness="2"></v-divider>
+            </template>
+            <v-list-item
+            v-for="title in item.expandedText.split('\n')"
+            :key="title"
+            class="ml-n4"
+            >
+            {{ title }}
+            </v-list-item>
+          </v-list-group>
+          </v-list>
+        </div>
       </div>
-      <div class="spacingCols">
-        <v-list v-model:opened="open">
-        <v-list-group v-for="(item, i) in items" :key="i" :value="item.title">
-          <template v-slot:activator="{ props }">
-          <v-list-item v-bind="props" class="bold-title">{{ item.title }}
-          </v-list-item>
-          <v-divider :thickness="2"></v-divider>
-          </template>
-          <v-list-item
-          v-for="title in item.expandedText.split('\n')"
-          :key="title"
-          class="ml-n4"
-          >
-          {{ title }}
-          </v-list-item>
-        </v-list-group>
-        </v-list>
-      </div>
-    </div>
+    </span>
 
     <div class="d-flex justify-center mt-12">
       <v-card class="blueCard2">
@@ -420,7 +425,7 @@ font-family: 'Sora', sans-serif;
 
 .biggerDivSpacing {
   margin-top: 20px;
-  margin-left: 20% !important;
+  margin-left: 10% !important;
   margin-right: 18% !important;
 }
 
